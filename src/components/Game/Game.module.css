@@ -1,0 +1,50 @@
+.box-game{
+  margin-top: 10px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 250px;
+    height: 250px;
+}
+
+.box-game img:not(.paper, .scissors, .rock){
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.box-scissors, .box-paper, .box-rock{
+  border-radius: 50%;
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-scissors{
+  background: var(--scissors-gradient);
+  top: -50px;
+  right: -25px;
+}
+
+.box-rock{
+  background: var(--rock-gradient);
+  bottom: 0px;
+  left: 125px;
+  transform: translateX(-50%);
+}
+
+.box-paper{
+  background: var(--paper-gradient);
+  top: -50px;
+  left: -25px;
+}
+
+
+.rock, .paper, .scissors{
+  width: 50px;
+}
