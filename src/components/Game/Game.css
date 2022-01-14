@@ -5,7 +5,7 @@
   margin: 0 auto;
   margin-top: 100px;
   width: 250px;
-    height: 250px;
+  height: 250px;
 }
 
 .box-game img:not(.paper, .scissors, .rock){
@@ -23,6 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .box-scissors{
@@ -31,19 +32,33 @@
   right: -25px;
 }
 
-.box-rock{
-  background: var(--rock-gradient);
-  bottom: 0px;
-  left: 125px;
-  transform: translateX(-50%);
-}
-
 .box-paper{
   background: var(--paper-gradient);
   top: -50px;
   left: -25px;
 }
 
+.box-rock{
+  background: var(--rock-gradient);
+  bottom: 25px;
+  left: 125px;
+  transform: translateX(-50%);
+}
+
+.box-scissors div, 
+.box-paper div, 
+.box-rock div{
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius: 50%;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 7px 0px 1px rgba(0,0,0,0.12) inset;
+-webkit-box-shadow: 0px 7px 0px 1px rgba(0,0,0,0.12) inset;
+-moz-box-shadow: 0px 7px 0px 1px rgba(0,0,0,0.12) inset;
+}
 
 .rock, .paper, .scissors{
   width: 50px;

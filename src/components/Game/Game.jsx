@@ -2,19 +2,25 @@ import triangle from '../../assets/images/bg-triangle.svg'
 import paper from '../../assets/images/icon-paper.svg';
 import rock from '../../assets/images/icon-rock.svg';
 import scissors from '../../assets/images/icon-scissors.svg';
-import styles from './Game.module.css'
-function Game() {
+import './Game.css';
+function Game({score, setScore}) {
   return (
-    <div className={styles['box-game']}>
+    <div className="box-game">
       <img src={triangle} alt="triangle.svg" />
-      <div className={styles['box-rock']}>
-        <img className={styles.rock} src={rock} alt="rock.svg" />
+      <div className="box-rock">
+        <div>
+          <img className="rock" src={rock} alt="rock.svg" />
+        </div>
       </div>
-      <div className={styles['box-paper']}>
-        <img className={styles.paper} src={paper} alt="paper.svg" />
+      <div className="box-paper" onClick={() => setScore((score + 1))}>
+        <div>
+          <img className="paper" src={paper} alt="paper.svg" />
+        </div>
       </div>
-      <div className={styles['box-scissors']}>
-        <img className={styles.scissors} src={scissors} alt="scissors.svg" />
+      <div className="box-scissors">
+        <div>
+          <img className="scissors" src={scissors} alt="scissors.svg" />
+        </div>
       </div>
     </div>
   )

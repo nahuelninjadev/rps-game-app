@@ -1,7 +1,7 @@
 import './RulesButton.css';
-function RulesButton(){
+function RulesButton(props){
   return(
-    <button className="btn-rules">RULES</button>
+    <button onClick={props.onClick} className="btn-rules">RULES</button>
   )
 }
 
